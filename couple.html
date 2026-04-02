@@ -1,0 +1,75 @@
+<!-- FINAL ENHANCED VERSION (ADDED DETAILS, SAME DESIGN KEPT) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benchmark Hotels - Pages</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins;background:#f7f7f7;color:#222}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;position:relative}
+.hero::after{content:'';position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.35)}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-family:'Playfair Display', serif;font-size:64px;letter-spacing:2px}
+
+.section{padding:100px 60px;text-align:center;background:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
+
+.card{background:#fff;border-radius:16px;padding:25px;box-shadow:0 10px 40px rgba(0,0,0,0.05);transition:0.4s}
+.card:hover{transform:translateY(-10px)}
+
+img{width:100%;border-radius:12px;transition:0.6s}
+img:hover{transform:scale(1.08)}
+
+.btn{margin-top:20px;padding:12px 25px;border:none;border-radius:10px;font-weight:500;cursor:pointer}
+
+footer{background:#eee;padding:40px;text-align:center}
+footer a{margin:0 10px;color:#555;text-decoration:none}
+
+.business-hero{background:url('https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+.couple-hero{background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+.family-hero{background:url('https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+
+.business .btn{background:#d0d7de}
+.couple .btn{background:#f5c6cb}
+.family .btn{background:#c8e6c9}
+
+</style>
+</head>
+<body>
+
+<!-- COUPLE HOTEL -->
+<div class="couple">
+<section class="hero couple-hero"><div class="hero-content"><h1>Benchmark Couple Retreat</h1><p>Intimate. Private. Timeless.</p></div></section>
+
+<section class="section"><h2>About</h2><p>A peaceful escape crafted for couples seeking privacy and elegance.</p></section>
+
+<section class="section"><h2>Gallery</h2><div class="grid">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+</div></section>
+
+<section class="section"><h2>Rooms & Pricing</h2><div class="grid">
+<div class="card"><h3>Romantic Suite</h3><p>₹6,000/night</p></div>
+<div class="card"><h3>Luxury Suite</h3><p>₹12,500/night</p></div>
+</div></section>
+
+<section class="section"><h2>Services</h2><p>Private Dining • Jacuzzi • Romantic Setup • Room Service</p></section>
+
+<section class="section"><h2>Book Now</h2><button class="btn">Reserve Romantic Stay</button></section>
+
+<footer>
+<p>Other Pages</p>
+<a href="#">Business Suites</a>
+<a href="#">Family Stay</a>
+<p>© Benchmark Hotels</p>
+</footer>
+</div>
+
+</body>
+</html>
