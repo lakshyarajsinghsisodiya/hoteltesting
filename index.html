@@ -117,13 +117,133 @@
       text-align: center;
       background: #eee;
     }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      header h1 {
+        font-size: 16px;
+      }
+
+      /* ✅ FIXED HERO */
+      .hero {
+        height: 60vh;
+        min-height: 350px;
+        background-attachment: scroll;
+        background-position: center;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 50px 20px;
+      }
+
+      .hotels {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 180px;
+      }
+
+      .booking-form {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      .btn {
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 55vh;
+        min-height: 300px;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      header h1 {
+        font-size: 14px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .card-content h3 {
+        font-size: 16px;
+      }
+
+      .card-content p {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
 
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
+
 <header>
   <h1>Benchmark Hotels</h1>
-  <nav>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
     <a href="#">Home</a>
     <a href="#hotels">Hotels</a>
     <a href="#booking">Booking</a>
@@ -141,7 +261,7 @@
 <section id="hotels" class="section">
     <h2>Our Hotels</h2>
     <div class="hotels">
-  
+
       <a href="business.html" style="text-decoration:none; color:inherit;">
         <div class="card">
           <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" />
@@ -151,7 +271,7 @@
           </div>
         </div>
       </a>
-  
+
       <a href="couple.html" style="text-decoration:none; color:inherit;">
         <div class="card">
           <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" />
@@ -161,7 +281,7 @@
           </div>
         </div>
       </a>
-  
+
       <a href="family.html" style="text-decoration:none; color:inherit;">
         <div class="card">
           <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" />
@@ -171,9 +291,10 @@
           </div>
         </div>
       </a>
-  
+
     </div>
   </section>
+
 <section id="booking" class="section">
   <h2>Book Your Stay</h2>
   <div class="booking-form">
@@ -203,4 +324,3 @@
 
 </body>
 </html>
-
